@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greeter</title>
+  </head>
+  <body>
+    <main>
+      <label for="nameTextbox">Name</label>
+      <input type="text" id="nameTextbox" />
+      <button id="greetButton">Greet</button>
+      <p id="messageParagraph">
+       
+      </p>
+    </main>
+    <script>
+      "use strict";
+      //get html elements
+      // let variableNameHoldingHTMLElement = document.getElementById("idOfHTMLElement")
+      let nameTextbox = document.getElementById("nameTextbox");
+      let greetButton = document.getElementById("greetButton");
+      let messageParagraph = document.getElementById("messageParagraph");  
+
+      // write functions to handle events
+      function greetByName() {
+        let name = nameTextbox.value;
+        let message = "Hello " + name;
+        messageParagraph.innerText = message;
+      }
+
+      //wire-up the functions to an event
+      greetButton.onclick = greetByName;
+    </script>
+  </body>
+</html>
