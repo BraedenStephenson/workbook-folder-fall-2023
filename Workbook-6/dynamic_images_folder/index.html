@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Images</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css" />
+    <link rel="stylesheet" href="/Workbook-6/dynamic_images_folder/styles.css" />
+  </head>
+  <body>
+    <main>
+      <form>
+        <label for="">Images</label>
+        <select id="imageList">
+          <option value="">Select...</option>
+          <!-- <option value="https://placehold.co/300x300">Placeholder</option> -->
+        </select> 
+        <button type="button" id="addImageButton">Add</button>
+        <button type="button" id="clearImagesButton">Clear</button>
+      </form>
+      <div id="imagesDiv">
+        <img src="https://placehold.co/300x300" alt="" />
+      </div>
+    </main>
+    <script src="/Workbook-6/dynamic_images_folder/scripts.js"></script>
+  </body>
+</html>

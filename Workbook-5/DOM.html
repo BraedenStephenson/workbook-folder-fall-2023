@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <p style="border: 2px dashed red">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ex voluptatem odit laborum, incidunt, voluptas
+          ipsum, neque reiciendis iure aut amet a et. Placeat, nulla necessitatibus aspernatur sequi, quaerat asperiores
+          porro repellat quisquam, unde eveniet libero? Beatae amet officia numquam sequi esse ad fugiat, magnam
+          cupiditate voluptatem, quam, nesciunt iusto libero deleniti. Laboriosam, praesentium? Saepe consequuntur quas
+          ipsam. Eaque numquam eius laudantium suscipit aspernatur necessitatibus, maiores fuga fugiat! Ad quasi minus
+          ipsum deserunt, corrupti accusamus deleniti eaque corporis placeat praesentium voluptatibus ab et reiciendis
+          mollitia blanditiis ipsam voluptates eveniet harum! Similique voluptates ipsum, consequatur repudiandae dolore
+          beatae in fugit ex!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, iste.</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, distinctio. Nesciunt optio sint eos
+          repellendus, sed corrupti unde delectus! Harum!
+        </p>
+        <button id="openButton">Open</button>
+      </section>
+    </main>
+    <script>
+      const openButton = document.getElementById("openButton");
+      const paragraphs = document.getElementsByTagName("p");
+
+      function changeBackground(params) {
+        document.body.style.backgroundColor = "yellow";
+
+        for (const paragraph of paragraphs) {
+          paragraph.style.backgroundColor = "purple";
+          paragraph.style.border = "2px dashed red";
+        }
+      }
+
+      setTimeout(changeBackground, 3000);
+
+      console.log(window.document.location.hostname);
+      console.log(navigator.userAgent);
+      //   alert("Your computer is being attacked by a virus. Click this link to run our virus scanner");
+      function openPage() {
+        window.open("https://www.yearup.org/");
+      }
+
+      openButton.onclick = openPage;
+    </script>
+  </body>
+</html>

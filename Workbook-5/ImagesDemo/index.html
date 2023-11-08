@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div>
+        <img src="https://placehold.co/300x300" />
+        <p>describe image above</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/300x300" />
+        <p>describe image above</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/300x300" />
+        <p>describe image above</p>
+      </div>
+    </main>
+    <script>
+      const paragraphs = document.querySelectorAll("p");
+      for (const paragraph of paragraphs) {
+        paragraph.style.border = "1px solid black";
+      }
+
+      function addClass() {
+        const images = document.querySelectorAll("img");
+        for (const image of images) {
+          image.className = "roundedImg";
+        }
+      }
+    </script>
+  </body>
+</html>
